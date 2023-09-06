@@ -1,14 +1,13 @@
 body{
     margin: 0;
     padding: 48px;
-    background-color: #1f1f3f;
-    
+    background-color: #3b103a;
 }
 
 .app{
   max-width: 640px;
   margin: 0 auto;
-  background-color:#f0f0f0;
+  background-color:#ffe3ff;
   padding: 24px 32px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -34,7 +33,7 @@ input{
 }
 
 button{
-  background-color: #333974;
+  background-color: #581858;
   color: #fff;
   padding: 4px 8px;
   border: none;
@@ -78,5 +77,4 @@ input, select{
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-
 }

@@ -16,12 +16,12 @@ function App() {
 
   return <div className="app">
     <h1>TO-DO Loading</h1>
+      <TodoForm />
     <div className="todo-list">
       {todos.map((todo) => (
         <Todo todo={todo} />
         ))}
     </div>
-        <TodoForm />
   </div>
 }
 

@@ -7,6 +7,7 @@ const TodoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!text || !category) return alert("Preencha todos os campos");
+    console.log(text, category);
   }
 
 
