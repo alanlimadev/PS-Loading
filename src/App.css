@@ -33,6 +33,50 @@ input{
   box-sizing: border-box;
 }
 
-button:hover{
+button{
+  background-color: #333974;
+  color: #fff;
+  padding: 4px 8px;
+  border: none;
   cursor: pointer;
+  border-radius: 2px;
+  opacity: .8;
+  transition: 0.3s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+.complete{
+  background-color: #5cb85c;
+}
+
+.remove{
+  background-color: #d9534f;
+}
+
+.todo-form{
+  padding-bottom: 1.5rem;
+}
+
+input, select{
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+
 }
