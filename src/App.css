@@ -78,7 +78,6 @@ button:hover{
 }
 
 .category {
-  color: #fff;
   color: #f9fff7;
   background-color: #6d44ba;
   padding: 2px;
@@ -112,4 +111,20 @@ input, select{
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+
+.filter, .search{
+  border-bottom: 1px solid #333;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.filter-options{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div{
+  flex: 1 1 0;
 }
