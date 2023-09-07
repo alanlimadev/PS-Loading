@@ -21,7 +21,7 @@ const Filter = ({filter, setFilter, category, setCategory, setOrder}) => {
                 </select>
             </div>
             <div>
-                <p>Ordem alfabética</p>
+                <p>Ordem alfabética:</p>
                 <button onClick={() => setOrder("Asc")}>Asc</button>
                 <button onClick={() => setOrder("Desc")}>Desc</button>
             </div>
