@@ -135,8 +135,11 @@ input, select{
 
 @media (max-width: 768px) {
   .complete, .remove{
-    display: block;
-    margin: auto auto 12px;
+    margin: auto;
+  }
+
+  .complete{
+    margin-right: 12px;
   }
   
   .filter-options{
