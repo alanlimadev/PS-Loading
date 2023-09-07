@@ -1,3 +1,7 @@
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 body{
     margin: 0;
     padding: 48px;
@@ -127,4 +131,24 @@ input, select{
 
 .filter-options div{
   flex: 1 1 0;
+}
+
+@media (max-width: 768px) {
+  .complete, .remove{
+    display: block;
+    margin: auto auto 12px;
+  }
+  
+  .filter-options{
+    flex-direction: column;
+  }
+
+  .todo{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filter-options{
+    gap: 0;
+  }
 }

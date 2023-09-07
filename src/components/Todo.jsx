@@ -9,7 +9,7 @@ const Todo = ({todo, removerTarefa, finalizarTarefa}) => {
           </div>
           <div>
             <button className="complete" onClick={() => finalizarTarefa(todo.id)}>Finalizar Tarefa</button>
-            <button className="remove" onClick={() => removerTarefa(todo.id)}>X</button>
+            <button className="remove" onClick={() => removerTarefa(todo.id)}>Excluir</button>
           </div>
         </div>
   )
