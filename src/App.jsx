@@ -2,10 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
+import Search from './components/Search';
 
 
 function App() {
   const [todos, setTodos] = useState([]);
+
+  const [search, setSearch] = useState("");
 
   const addTarefa = (text, category) => {
     const newTodos = [
@@ -46,10 +49,20 @@ function App() {
 
   return <div className="app">
     <h1>TO-DO Loading</h1>
-      <TodoForm addTarefa={addTarefa}/>
+    <TodoForm addTarefa={addTarefa}/>
     <div className="todo-list">
-      {todos.map((todo) => (
-        <Todo key={todo.id} todo={todo} removerTarefa={removerTarefa} finalizarTarefa={finalizarTarefa}/>
+      <Search search={search} setSearch={setSearch}/>
+      {todos
+        .filter((todo) => 
+          todo.text.toLowerCase().includes(search.toLowerCase())
+        )
+        .map((todo) => (
+          <Todo 
+            key={todo.id} 
+            todo={todo} 
+            removerTarefa={removerTarefa} 
+            finalizarTarefa={finalizarTarefa}
+          />
         ))}
     </div>
   </div>
