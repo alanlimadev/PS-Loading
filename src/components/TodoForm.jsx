@@ -1,13 +1,13 @@
 import {useState} from 'react'
 
-const TodoForm = ({addTodo}) => {
+const TodoForm = ({addTarefa}) => {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!text || !category) return alert("Preencha todos os campos");
-    addTodo(text, category);
+    addTarefa(text, category);
     setText("");
     setCategory("");
     
