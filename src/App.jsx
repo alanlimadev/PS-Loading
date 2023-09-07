@@ -5,14 +5,7 @@ import TodoForm from './components/TodoForm';
 
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id:1,
-      text: "Estudar React",
-      category: "Estudos",
-      isCompleted: false,
-    }
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (text, category) => {
     const newTodos = [
