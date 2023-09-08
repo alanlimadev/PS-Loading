@@ -61,8 +61,8 @@ button:hover{
 }
 
 .todo-list{
-  margin-top: 24px;
-  padding-top: 24px;
+  margin-top: 8px;
+  /* padding-top: 24px; */
   border-top: 1px solid #333;
 }
 
@@ -135,6 +135,14 @@ input, select{
 }
 
 @media (max-width: 768px) {
+p{
+  margin: 0 0 8px;
+}
+
+.filter-option{
+  margin-bottom: 8px;
+}
+
 .category{
   margin: auto auto 16px;
 }
@@ -157,7 +165,7 @@ input, select{
   }
 
   .filter-options{
-    gap: 0;
+    display: block;
   }
 }
 
