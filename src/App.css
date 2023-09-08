@@ -91,6 +91,7 @@ button:hover{
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  max-width: 100px;
 }
 
 .complete{
@@ -134,6 +135,10 @@ input, select{
 }
 
 @media (max-width: 768px) {
+.category{
+  margin: auto auto 16px;
+}
+
   .complete, .remove{
     margin: auto;
   }
@@ -155,3 +160,25 @@ input, select{
     gap: 0;
   }
 }
+
+@media (max-width: 380px) {
+    .status{
+      display: flex;
+      flex-direction: column;
+      margin: auto;;
+      gap: 4px;
+    }
+
+    .complete{
+      margin-right: 0;
+    }
+    
+    .filter-options{
+      flex-direction: column;
+    }
+  
+    .todo{
+      flex-direction: column;
+      text-align: center;
+    }
+  }

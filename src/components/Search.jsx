@@ -4,7 +4,7 @@ const Search = ({search, setSearch}) => {
             <h2>Buscar</h2>
             <input 
                 type="text" 
-                placeholder="Digite para buscar" 
+                placeholder="Digite para buscar..." 
                 onChange={(e) => setSearch(e.target.value)} 
                 value={search}
             />
@@ -12,4 +12,4 @@ const Search = ({search, setSearch}) => {
     );
 };
 
-export default Search
+export default Search;
