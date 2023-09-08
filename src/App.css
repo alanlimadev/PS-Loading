@@ -94,12 +94,34 @@ button:hover{
   max-width: 100px;
 }
 
+.complete, .remove{
+  margin-right: 0%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
 .complete{
   background-color: #5cb85c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
 }
 
 .remove{
+  margin-right: 12px;
   background-color: #d9534f;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
 }
 
 .todo-form{
@@ -135,24 +157,20 @@ input, select{
 }
 
 @media (max-width: 768px) {
-p{
-  margin: 0 0 8px;
-}
+  p{
+    margin: 0 0 8px;
+  }
 
-.filter-option{
-  margin-bottom: 8px;
-}
+  .filter-option{
+    margin-bottom: 8px;
+  }
 
-.category{
-  margin: auto auto 16px;
-}
+  .category{
+    margin: auto auto 16px;
+  }
 
   .complete, .remove{
     margin: auto;
-  }
-
-  .complete{
-    margin-right: 12px;
   }
   
   .filter-options{
@@ -177,9 +195,13 @@ p{
       gap: 4px;
     }
 
-    .complete{
-      margin-right: 0;
-    }
+    .complete, .remove{
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+}
     
     .filter-options{
       flex-direction: column;
