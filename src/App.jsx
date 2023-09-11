@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
@@ -17,42 +17,54 @@ function App() {
 
   const [order, setOrder] = useState("Asc");
 
-  const addTarefa = (text, category) => {
-    const newTodos = [
-      ...todos, 
-      {
-        id: Math.floor(Math.random() * 10000), 
-        text, 
-        category, 
+    // Função para adicionar uma tarefa
+    const addTarefa = (text, category) => {
+      // Cria uma nova tarefa
+      const newTask = {
+        id: Math.floor(Math.random() * 10000),
+        text,
+        category,
         isCompleted: false,
-      }
-    ];
-    setTodos(newTodos);
-  };
+      };
+  
+      // Atualiza a lista de tarefas no estado
+      const newTodos = [...todos, newTask];
+      setTodos(newTodos);
+  
+      // Armazena a lista atualizada no localStorage
+      localStorage.setItem("todos", JSON.stringify(newTodos));
+    };
 
+  // Função para remover uma tarefa
   const removerTarefa = (id) => {
-    const newTodos = [...todos];
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
 
-    const filteredTodos = newTodos.filter((todo) => {
-      if(todo.id !== id) {
-        return todo;
-      }
-      return null;
-    });
-
-    setTodos(filteredTodos);
+    // Atualiza o localStorage após a remoção
+    localStorage.setItem("todos", JSON.stringify(newTodos));
   };
 
+  // Função para finalizar uma tarefa
   const finalizarTarefa = (id) => {
-    const newTodos = [...todos];
-    newTodos.map((todo) => {
-      if(todo.id === id) {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
         todo.isCompleted = !todo.isCompleted;
       }
       return todo;
     });
     setTodos(newTodos);
-  }
+
+    // Atualiza o localStorage após a alteração do estado
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+  };
+
+  // Efeito para carregar os dados do localStorage quando o componente é montado
+  useEffect(() => {
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+  }, []);
 
   return <div className="app">
     <h1>TO-DO Loading</h1>
