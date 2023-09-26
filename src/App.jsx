@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import './App.css';
-import Todo from './components/Todo';
-import TodoForm from './components/TodoForm';
-import Search from './components/Search';
-import Filter from './components/Filter';
-
+import { useState, useEffect } from "react";
+import "./App.css";
+import Todo from "./components/Todo";
+import TodoForm from "./components/TodoForm";
+import Search from "./components/Search";
+import Filter from "./components/Filter";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -17,23 +16,23 @@ function App() {
 
   const [order, setOrder] = useState("Asc");
 
-    // Função para adicionar uma tarefa
-    const addTarefa = (text, category) => {
-      // Cria uma nova tarefa
-      const newTask = {
-        id: Math.floor(Math.random() * 10000),
-        text,
-        category,
-        isCompleted: false,
-      };
-  
-      // Atualiza a lista de tarefas no estado
-      const newTodos = [...todos, newTask];
-      setTodos(newTodos);
-  
-      // Armazena a lista atualizada no localStorage
-      localStorage.setItem("todos", JSON.stringify(newTodos));
+  // Função para adicionar uma tarefa
+  const addTarefa = (text, category) => {
+    // Cria uma nova tarefa
+    const newTask = {
+      id: Math.floor(Math.random() * 10000),
+      text,
+      category,
+      isCompleted: false,
     };
+
+    // Atualiza a lista de tarefas no estado
+    const newTodos = [...todos, newTask];
+    setTodos(newTodos);
+
+    // Armazena a lista atualizada no localStorage
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+  };
 
   // Função para remover uma tarefa
   const removerTarefa = (id) => {

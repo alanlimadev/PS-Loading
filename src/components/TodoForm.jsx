@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 // Componente para criar uma nova tarefa
 const TodoForm = ({ addTarefa }) => {
@@ -18,7 +18,7 @@ const TodoForm = ({ addTarefa }) => {
     // Limpa os campos de texto e categoria após o envio
     setText("");
     setCategory("");
-  }
+  };
 
   return (
     <div className="todo-form">
@@ -26,7 +26,12 @@ const TodoForm = ({ addTarefa }) => {
       <h2>Criar Nova Tarefa</h2>
       <form onSubmit={handleSubmit}>
         {/* Campo de entrada de texto para o título da tarefa */}
-        <input type="text" placeholder="Digite o título" onChange={(e) => setText(e.target.value)} value={text} />
+        <input
+          type="text"
+          placeholder="Digite o título"
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+        />
         {/* Dropdown para seleção da categoria da tarefa */}
         <select onChange={(e) => setCategory(e.target.value)} value={category}>
           <option value="">Selecione uma categoria</option>
@@ -39,6 +44,6 @@ const TodoForm = ({ addTarefa }) => {
       </form>
     </div>
   );
-}
+};
 
 export default TodoForm;
